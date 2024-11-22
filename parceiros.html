@@ -4,13 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Saúde</title>
-    <style>
-        body {
-            width: 1280px;
-            height: 832px;
-            margin: 0 auto;
-            overflow: hidden;
+  <!-- <link rel="stylesheet" href="estilo.css"> -->
+   <style>
+               header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
         }
+        .header_div {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
+        .header_div img {
+            width: 200px;
+            height: 200px;
+        }
+        .header_div ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            align-self: flex-end;
+        }
+        .header_div ul li {
+            margin: 0;
+        }
+        .user-button {
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .user-button img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header_div .border-line {
+            border-top: 2px solid green;
+            width: 100%;
+            margin-top: 10px;
+        }    
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -30,7 +74,7 @@
             padding: 10px;
             border-radius: 8px;
         }
-        .newsletter {
+         .newsletter {
             background-color: #007BFF;
             color: white;
             padding: 20px;
@@ -55,32 +99,50 @@
             color: white;
             cursor: pointer;
         }
-        footer {
-            background-color: #f1f1f1;
-            padding: 20px;
+       footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-            width: 1281px;
-            height: 231px;
-            margin: 20px auto;
-            border-radius: 10px;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        footer .footer-section {
-            display: inline-block;
-            width: 30%;
-            vertical-align: top;
-            margin: 0 1%;
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f1f1f1;
         }
-        footer .footer-section h3 {
+        .footer-section {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .footer-section h2 {
+            font-size: 1.5em;
             margin-bottom: 10px;
         }
-        footer .footer-section ul {
+        .footer-section ul {
             list-style-type: none;
             padding: 0;
         }
-        footer .footer-section ul li {
+        .footer-section ul li {
             margin-bottom: 5px;
         }
-    </style>
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .logos {
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 114px;
+            height: 114px;
+            border-radius: 50%;
+        }
+   </style>
 </head>
 <body>
     <header>
@@ -94,11 +156,11 @@
                     <span>Área de membros</span>
                 </button>
                 <ul>
-                    <li>Institucional</li>
+                    <li><a href="index.html">Institucional</a></li>
                     <li>Notícias</li>
                     <li>Novas Descobertas</li>
                     <li>Prevenções e Recomendações</li>
-                    <li><a href="parceiros.html">Parceiro</a></li>
+                    <li><a href="parceiros.html">Parceiros</a></li>
                 </ul>
                 <div class="border-line"></div>
             </div>
@@ -147,32 +209,47 @@
         </form>
     </div>
 
-    <footer>
-        <div class="footer-section">
-            <h3>Mapa do Site</h3>
-            <ul>
-                <li><a href="#link1">Link 1</a></li>
-                <li><a href="#link2">Link 2</a></li>
-                <li><a href="#link3">Link 3</a></li>
-            </ul>
+</section>
+<div class="footer">
+    <div class="footer-section">
+        <h2>Mapa do Site</h2>
+        <ul>
+            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Novas Descobertas</a></li>
+            <li><a href="#">Prevenções e Recomendações</a></li>
+            <li><a href="#">Parceiros</a></li>
+            <li><a href="#">Área de Membros</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h2>Fale Conosco</h2>
+        <ul>
+            <li><a href="#">Atendimento</a></li>
+            <li><a href="#">Seja um Parceiro</a></li>
+            <li><a href="#">Ouvidoria</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h2>Transparência</h2>
+        <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Canal de Denúncias</a></li>
+            <li><a href="#">Código de Ética e Conduta</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h2>Parceiros</h2>
+        <div class="logos">
+            <img src="logo1.png" alt="Logo 1" class="logo">
+            <img src="logo2.png" alt="Logo 2" class="logo">
+            <img src="logo3.png" alt="Logo 3" class="logo">
         </div>
-        <div class="footer-section">
-            <h3>Fale Conosco</h3>
-            <ul>
-                <li><a href="#link4">Link 4</a></li>
-                <li><a href="#link5">Link 5</a></li>
-                <li><a href="#link6">Link 6</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Transparência</h3>
-            <ul>
-                <li><a href="#link7">Link 7</a></li>
-                <li><a href="#link8">Link 8</a></li>
-                <li><a href="#link9">Link 9</a></li>
-            </ul>
-        </div>
-    </footer>
+    </div>
+</div>
+</div>
 </body>
 </html>
 
